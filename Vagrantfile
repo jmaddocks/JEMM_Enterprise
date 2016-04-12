@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 		master.vm.hostname = "JEMMEmaster.qac.local"
 		master.vm.box	   = "chad-thompson/ubuntu-trusty64-gui"
 		master.vm.network "public_network", ip: masterIP
-		master.vm.provision :shell, path:"bootstrap_m.sh"
+		#master.vm.provision :shell, path: "bootstrap_m.sh"
 		master.vm.provider :virtualbox do |masterE|
 			masterE.gui    = true
 			masterE.name   = "master"
@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
 		agent1.vm.hostname = "Jemmeagent1.qac.local"
 		agent1.vm.box 	   = "chad-thompson/ubuntu-trusty64-gui"
 		agent1.vm.network "public_network", ip: agent1ip
-		agent1.vm.provision :shell, path: "bootstrap_a.sh"
+		#agent1.vm.provision :shell, path: "bootstrap_a.sh"
 		agent1.vm.provider :virtualbox do |agent1e|
 			agent1e.gui    = true
 			agent1e.name   = "agent1e"
@@ -42,10 +42,10 @@ Vagrant.configure("2") do |config|
 		agent2.vm.hostname = "Jemmeagent2.qac.local"
 		agent2.vm.box = "chad-thompson/ubuntu-trusty64-gui"
 		agent2.vm.network "public_netowrk", ip: agent2ip
-		agent2.vm.provision :shell, path: "bootstrap_a.sh"
+		#agent2.vm.provision :shell, path: "bootstrap_a.sh"
 		agent2.vm.provider :virtualbox do |agent2e|
 			agent2e.gui    = true
-			agent2e.name   = "agent2e"
+			agent2e.name   = "agent2Enterprise"
 			agent2e.memory = 1024
 			agent2e.cpus   = 2
 		end
@@ -55,10 +55,10 @@ Vagrant.configure("2") do |config|
 		agent3.vm.hostname = "Jemmeagent3.qac.local"
 		agent3.vm.box = "chad-thompson/ubuntu-trusty64-gui"
 		agent3.vm.network "public_network", ip: agent3ip
-		agent3.vm.provision :shell, path: "bootstrap_a.sh"
+		#agent3.vm.provision :shell, path: "bootstrap_a.sh"
 		agent3.vm.provider :virtualbox do |agent3e|
 			agent3e.gui    = true
-			agent3e.name   = "agent3e"
+			agent3e.name   = "agent3Enterprise"
 			agent3e.memory = 1024
 			agent3e.cpus   = 2
 		end
@@ -68,10 +68,10 @@ Vagrant.configure("2") do |config|
 		agent4.vm.hostname = "Jemmeagent4.qac.local"
 		agent4.vm.box = "chad-thompson/ubuntu-trusty64-gui"
 		agent4.vm.network "public_netowrk", ip: agent4ip
-		agent4.vm.provision :shell, path: "bootstrap_a.sh"
+		#agent4.vm.provision :shell, path: "bootstrap_a.sh"
 		agent4.vm.provider :virtualbox do |agent4e|
 			agent4e.gui    = true
-			agent4e.name   = "agent4e"
+			agent4e.name   = "agent4Enterprise"
 			agent4e.memory = 1024
 			agent4e.cpus   = 2
 		end
@@ -81,10 +81,10 @@ Vagrant.configure("2") do |config|
 		agent5.vm.hostname = "Jemmeagent5.qac.local"
 		agent5.vm.box = "chad-thompson/ubuntu-trusty64-gui"
 		agent5.vm.network "public_netowrk", ip: agent5ip
-		agent5.vm.provision :shell, path: "bootstrap_a.sh"
+		#agent5.vm.provision :shell, path: "bootstrap_a.sh"
 		agent5.vm.provider :virtualbox do |agent5e|
 			agent5e.gui    = true
-			agent5e.name   = "agent5e"
+			agent5e.name   = "agent5Enterprise"
 			agent5e.memory = 1024
 			agent5e.cpus   = 2
 		end
